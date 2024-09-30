@@ -16,29 +16,47 @@ let groceryList = ["Milk", "Oreos"];
 // Return the new item.
 
 // Code to modularize:
-let item = "Animal Crackers";
-groceryList.push(item);
-console.log("Item added: " + item);
+let item1 = "Animal Crackers";
+groceryList.push(item1);
+console.log("Item added: " + item1);
+
+let item2 = "Avocados";
+groceryList.push(item2);
+console.log("Item added: " + item2);
+
+let item3 = "Frozen Pizza";
+groceryList.push(item3);
+console.log("Item added: " + item3);
 
 //////////////////////////////////////////////////////////////////////
 // 2. Create a function that removes the last item from the list.
 // Return the removed item.
 
 // Code to modularize:
-let itemToRemove = groceryList[groceryList.length - 1];
+let itemToRemove1 = groceryList[groceryList.length - 1];
 groceryList.pop();
-console.log("Item removed: " + itemToRemove);
+console.log("Item removed: " + itemToRemove1);
+
+let itemToRemove2 = groceryList[groceryList.length - 1];
+groceryList.pop();
+console.log("Item removed: " + itemToRemove2);
 
 //////////////////////////////////////////////////////////////////////
 // 3. Create a function that updates a specific item in the list.
 // Return the updated item.
 
 // Code to modularize:
-let indexToUpdate = 0;
-let newItem = "Bananas";
-let oldItem = groceryList[indexToUpdate];
-groceryList[indexToUpdate] = newItem;
-console.log("Item updated from " + oldItem + " to " + newItem);
+let indexToUpdate1 = 0;
+let newItem1 = "Bananas";
+let oldItem1 = groceryList[indexToUpdate1];
+groceryList[indexToUpdate1] = newItem1;
+console.log("Item updated from " + oldItem1 + " to " + newItem1);
+
+let indexToUpdate2 = 2;
+let newItem2 = "Olive Oil";
+let oldItem2 = groceryList[indexToUpdate2];
+groceryList[indexToUpdate2] = newItem2;
+console.log("Item updated from " + oldItem2 + " to " + newItem2);
 
 //////////////////////////////////////////////////////////////////////
 // 4. Create a function that shows the current grocery list.
