@@ -111,26 +111,31 @@ if (groceryList.length === 0) {
 
 // Call 2: Add Gouda Cheese
 
-// Call 3: Add Brie Cheese
+// Call 3: Add Swiss Cheese
 
-// Call 4: Add Swiss Cheese
+// Call 4: Remove Swiss Cheese
 
-// Call 5: Remove Swiss Cheese
+// Call 5: Add Green Grapes
 
-// Call 6: Add Green Grapes
+// Call 6: Add Prosciutto
 
-// Call 7: Show the list
+// Call 7: Add Chorizo
 
-// Call 8: Add Prosciutto
+// Call 8: Add Multigrain Crackers
 
-// Call 9: Add Chorizo
+// Call 9: Update Chorizo to Jamon
 
-// Call 10: Add Multigrain Crackers
+// Call 10: Show the count of items
 
-// Call 11: Update Chorizo to Jamon
+// Call 11: Add Pita Chips
 
-// Call 12: Show the count of items
+// Call 12: Show the final list
 
-// Call 13: Add Pita Chips
 
-// Call 14: Show the final list
+//////////////////////////////////////////////////////////////////////
+// Extra Credit - Improving functions
+// EC1: Function #3 asks you to create a function that updates an item from the array. 
+// Refactor it so that instead of taking an index it takes in the name of the item you want to update. 
+
+// EC2: Function #2 asks you to create a function that removes the last item from the grocery list. 
+// Refactor it so that it can remove any item from any part of the grocery list. 
