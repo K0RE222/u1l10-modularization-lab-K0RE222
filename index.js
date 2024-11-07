@@ -16,58 +16,52 @@ let groceryList = ["Milk", "Oreos"];
 // Return the new item.
 
 // Code to modularize:
-let item1 = "Animal Crackers";
-groceryList.push(item1);
-console.log("Item added: " + item1);
-
-let item2 = "Avocados";
-groceryList.push(item2);
-console.log("Item added: " + item2);
-
-let item3 = "Frozen Pizza";
-groceryList.push(item3);
-console.log("Item added: " + item3);
+function addItems(item){
+  groceryList.push(item);
+  console.log("Item added: " + item);
+  return item
+}
 
 //////////////////////////////////////////////////////////////////////
 // 2. Create a function that removes the last item from the list.
 // Return the removed item.
 
 // Code to modularize:
-let itemToRemove1 = groceryList[groceryList.length - 1];
-groceryList.pop();
-console.log("Item removed: " + itemToRemove1);
 
-let itemToRemove2 = groceryList[groceryList.length - 1];
+function removeItem(){
+let item = groceryList[groceryList.length - 1];
 groceryList.pop();
-console.log("Item removed: " + itemToRemove2);
+console.log("Item removed: " + item);
+return item
+}
 
 //////////////////////////////////////////////////////////////////////
 // 3. Create a function that updates a specific item in the list.
 // Return the updated item.
 
 // Code to modularize:
-let indexToUpdate1 = 0;
-let newItem1 = "Bananas";
-let oldItem1 = groceryList[indexToUpdate1];
-groceryList[indexToUpdate1] = newItem1;
-console.log("Item updated from " + oldItem1 + " to " + newItem1);
+function updateList(i, updatedItem){
+  groceryList[i] = updatedItem
+console.log("Item updated from " + i + " to " + updatedItem)
+ return updatedItem
+}
 
-let indexToUpdate2 = 2;
-let newItem2 = "Olive Oil";
-let oldItem2 = groceryList[indexToUpdate2];
-groceryList[indexToUpdate2] = newItem2;
-console.log("Item updated from " + oldItem2 + " to " + newItem2);
 
 //////////////////////////////////////////////////////////////////////
 // 4. Create a function that shows the current grocery list.
 // Returns the grocery list array.
 
 // Code to modularize:
-if (groceryList.length === 0) {
+
+function listLength(){
+if (groceryList.length == 0) {
   console.log("The grocery list is empty.");
-} else {
+ } else {
   console.log("Grocery List: " + groceryList);
+ }
+ return groceryList
 }
+
 
 //////////////////////////////////////////////////////////////////////
 
@@ -79,10 +73,26 @@ if (groceryList.length === 0) {
 // It should log the following "The grocery list has x item(s).", with x being how many items are left.
 // Returns the grocery list length.
 
+function itemCount(){
+  let itemAmount = groceryList.length
+  console.log("The grocery list has " + itemAmount + " item(s).")
+  console.log(groceryList)
+  return itemAmount
+}
+
+
+
 //////////////////////////////////////////////////////////////////////
 // 2. Write a function that clears the whole grocery list.
 // It should log the following "The grocery list is now empty."
 // Returns the empty grocery list.
+
+function clearList(){
+groceryList = []
+ console.log(groceryList)
+ console.log("The grocery list is now empty.")
+ return groceryList
+}
 
 //////////////////////////////////////////////////////////////////////
 // Part 3 - Calling Functions
@@ -107,30 +117,46 @@ if (groceryList.length === 0) {
 // Grocery List: Gouda Cheese, Brie Cheese, Green Grapes, Prosciutto, Jamon, Multigrain Crackers, Pita Chips
 */
 
+addItems("Animal Crackers")
+addItems("Avocados")
+addItems("Frozen Pizza")
+
+removeItem("Frozen Pizza")
+removeItem("Avocados")
+
+updateList(2, "Bananas")
+updateList(1, "Olive Oil")
+
+listLength()
+itemCount()
+
+
+
+
 // Call 1: Clear the grocery list
-
+clearList()
 // Call 2: Add Gouda Cheese
-
+addItems("Gouda Cheese")
 // Call 3: Add Swiss Cheese
-
+addItems("Swiss Cheese")
 // Call 4: Remove Swiss Cheese
-
+removeItem("Swiss Cheese")
 // Call 5: Add Green Grapes
-
+addItems("Green Grapes")
 // Call 6: Add Prosciutto
-
+addItems("Prosciutto")
 // Call 7: Add Chorizo
-
+addItems("Chorizo")
 // Call 8: Add Multigrain Crackers
-
+addItems("Multigrain Crackers")
 // Call 9: Update Chorizo to Jamon
-
+updateList(2, "Jamon")
 // Call 10: Show the count of items
-
+itemCount()
 // Call 11: Add Pita Chips
-
+addItems("Pita Chips")
 // Call 12: Show the final list
-
+itemCount()
 
 //////////////////////////////////////////////////////////////////////
 // Extra Credit - Improving functions
